@@ -5,141 +5,333 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit Deletion Request - Health Tracker App</title>
     <link rel="icon" type="image/png" href="images/app_icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Outfit', sans-serif;
-            line-height: 1.7;
+            line-height: 1.6;
             color: #2D3748;
-            background-color: #F7FAFC;
+            background: linear-gradient(135deg, #F7FAFC 0%, #EDF2F7 100%);
             margin: 0;
             padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .container {
             background-color: #ffffff;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 36px 32px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
             border: 1px solid #E2E8F0;
-            max-width: 500px;
-            margin: 40px auto;
+            max-width: 520px;
+            width: 100%;
+            margin: 20px auto;
         }
         h1 {
             color: #E64A19;
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 700;
             margin-top: 0;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #FBE9E7;
-            padding-bottom: 12px;
+            margin-bottom: 8px;
             text-align: center;
         }
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #718096;
+            margin-bottom: 24px;
+        }
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
         label {
             display: block;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-size: 14px;
             color: #4A5568;
         }
         input[type="text"], input[type="email"], textarea {
             width: 100%;
-            padding: 12px;
-            border: 1px solid #CBD5E0;
-            border-radius: 8px;
+            padding: 12px 14px;
+            border: 1.5px solid #CBD5E0;
+            border-radius: 10px;
             font-size: 14px;
-            box-sizing: border-box;
             font-family: 'Outfit', sans-serif;
+            transition: all 0.2s ease;
+            background-color: #FAFAFA;
         }
         input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
             outline: none;
             border-color: #E64A19;
+            background-color: #FFFFFF;
             box-shadow: 0 0 0 3px rgba(230, 74, 25, 0.15);
         }
         .btn-submit {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             width: 100%;
-            background-color: #E64A19;
+            background: linear-gradient(135deg, #E64A19 0%, #D84315 100%);
             color: #ffffff;
             padding: 14px;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
             text-align: center;
-            box-sizing: border-box;
+            box-shadow: 0 4px 12px rgba(230, 74, 25, 0.25);
+            transition: all 0.2s ease;
+            margin-top: 10px;
         }
         .btn-submit:hover {
-            background-color: #D84315;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(230, 74, 25, 0.35);
+            background: linear-gradient(135deg, #D84315 0%, #BF360C 100%);
+        }
+        .btn-submit:active {
+            transform: translateY(0);
         }
         .back-link {
-            display: block;
+            display: inline-block;
             text-align: center;
-            margin-top: 20px;
+            width: 100%;
+            margin-top: 24px;
             font-size: 14px;
             color: #718096;
             text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
         }
         .back-link:hover {
             color: #E64A19;
         }
-        .fallback-modal {
+        
+        /* Email Options Card */
+        .email-options-card {
             display: none;
             margin-top: 24px;
-            padding: 20px;
-            background-color: #FFF3E0;
-            border: 1px solid #FFE0B2;
-            border-radius: 12px;
+            padding: 24px;
+            background: #FFF8F6;
+            border: 1.5px solid #FFCCBC;
+            border-radius: 14px;
+            animation: fadeIn 0.3s ease;
         }
-        .fallback-modal h3 {
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .email-options-card h3 {
             margin-top: 0;
-            color: #E65100;
-            font-size: 16px;
-            font-weight: 600;
+            color: #BF360C;
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        .fallback-modal p {
-            font-size: 13.5px;
-            color: #E65100;
-            margin-bottom: 12px;
+        .email-options-card p {
+            font-size: 14px;
+            color: #5D4037;
+            margin-bottom: 16px;
+        }
+        .email-btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .btn-email-option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+        .btn-gmail {
+            background-color: #EA4335;
+            color: #FFFFFF;
+        }
+        .btn-gmail:hover {
+            background-color: #D93025;
+            color: #FFFFFF;
+        }
+        .btn-outlook {
+            background-color: #0078D4;
+            color: #FFFFFF;
+        }
+        .btn-outlook:hover {
+            background-color: #106EBE;
+            color: #FFFFFF;
+        }
+        .btn-default-mail {
+            background-color: #2E7D32;
+            color: #FFFFFF;
+        }
+        .btn-default-mail:hover {
+            background-color: #1B5E20;
+            color: #FFFFFF;
         }
         .btn-copy {
-            background-color: #E65100;
-            color: #ffffff;
-            border: none;
-            padding: 10px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 14px;
-            margin-top: 10px;
-            width: 100%;
+            background-color: #FFFFFF;
+            color: #E64A19;
+            border: 1.5px solid #FFAB91;
         }
         .btn-copy:hover {
-            background-color: #D84315;
+            background-color: #FBE9E7;
+        }
+        .details-box {
+            width: 100%;
+            padding: 12px;
+            font-family: monospace;
+            font-size: 12px;
+            border-radius: 8px;
+            border: 1px solid #FFCCBC;
+            background-color: #FFFFFF;
+            color: #2D3748;
+            resize: vertical;
+        }
+
+        /* Success Dialog Overlay Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            padding: 20px;
+        }
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 32px 28px;
+            max-width: 440px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: scale(0.9);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .modal-overlay.active .modal-card {
+            transform: scale(1);
+        }
+        .success-badge {
+            width: 68px;
+            height: 68px;
+            background-color: #E8F5E9;
+            color: #2E7D32;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            box-shadow: 0 0 0 10px rgba(76, 175, 80, 0.12);
+        }
+        .modal-card h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1A202C;
+            margin: 0 0 8px;
+        }
+        .modal-card p {
+            font-size: 14.5px;
+            color: #4A5568;
+            line-height: 1.5;
+            margin-bottom: 18px;
+        }
+        .modal-summary-box {
+            background-color: #F8FAFC;
+            border: 1px solid #E2E8F0;
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 22px;
+            text-align: left;
+            font-size: 13.5px;
+            color: #2D3748;
+        }
+        .modal-summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+        .modal-summary-item:last-child {
+            margin-bottom: 0;
+        }
+        .modal-summary-label {
+            font-weight: 600;
+            color: #718096;
+        }
+        .modal-summary-val {
+            font-weight: 600;
+            color: #2D3748;
+            word-break: break-all;
+        }
+        .btn-modal-action {
+            width: 100%;
+            background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+            color: #ffffff;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(46, 125, 50, 0.25);
+            transition: all 0.2s ease;
+        }
+        .btn-modal-action:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(46, 125, 50, 0.35);
+            background: linear-gradient(135deg, #1B5E20 0%, #0F3811 100%);
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Submit Deletion Request</h1>
+        <p class="subtitle">Fill in your details below to send an account deletion request email.</p>
         
         <form id="deletionForm">
             <div class="form-group">
                 <label for="name">Full Name *</label>
-                <input type="text" id="name" required placeholder="Enter your full name">
+                <input type="text" id="name" required placeholder="e.g. John Doe">
             </div>
             
             <div class="form-group">
                 <label for="email">Registered Email Address *</label>
-                <input type="email" id="email" required placeholder="Enter your registered email">
+                <input type="email" id="email" required placeholder="e.g. john@example.com">
             </div>
             
             <div class="form-group">
                 <label for="phone">Phone / WhatsApp Number (Optional)</label>
-                <input type="text" id="phone" placeholder="Enter your phone number">
+                <input type="text" id="phone" placeholder="e.g. +1 234 567 8900">
             </div>
             
             <div class="form-group">
@@ -147,18 +339,74 @@
                 <textarea id="reason" rows="3" placeholder="Tell us why you are deleting your account"></textarea>
             </div>
             
-            <button type="submit" class="btn-submit">Submit Request</button>
+            <button type="submit" class="btn-submit">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                Send Request via Email
+            </button>
         </form>
 
-        <!-- Fallback Modal for Clipboard Copying -->
-        <div id="fallbackModal" class="fallback-modal">
-            <h3>Request Prepared!</h3>
-            <p>If your email app didn't open automatically, please send an email to <strong>healthtracker.support@gmail.com</strong> with the details below:</p>
-            <textarea id="copyText" rows="7" readonly style="width:100%; padding:10px; font-family:monospace; font-size:12.5px; border-radius:6px; border:1px solid #FFE0B2; background-color:#FFF; box-sizing:border-box; color:#2D3748;"></textarea>
-            <button onclick="copyRequestText()" class="btn-copy">Copy Details to Clipboard</button>
+        <!-- Dynamic Email Options Card for Web & Mobile -->
+        <div id="emailOptionsCard" class="email-options-card">
+            <h3>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                Request Prepared!
+            </h3>
+            <p>Select your email provider below to complete and send your request to <strong>healthtracker.support@gmail.com</strong>:</p>
+            
+            <div class="email-btn-group">
+                <a id="gmailWebBtn" href="#" target="_blank" class="btn-email-option btn-gmail">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.545l8.073-6.052C21.69 2.28 24 3.434 24 5.457z"/></a >
+                    Open in Gmail (Web)
+                </a>
+                
+                <a id="outlookWebBtn" href="#" target="_blank" class="btn-email-option btn-outlook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M1 17.75A3.25 3.25 0 0 0 4.25 21h15.5A3.25 3.25 0 0 0 23 17.75V6.25A3.25 3.25 0 0 0 19.75 3H4.25A3.25 3.25 0 0 0 1 6.25v11.5zm3.25-13.25h15.5c.966 0 1.75.784 1.75 1.75v1.396l-9.5 5.938-9.5-5.938V6.25c0-.966.784-1.75 1.75-1.75zM2.5 8.941l9.13 5.706a.75.75 0 0 0 .74 0L21.5 8.94v8.81c0 .966-.784 1.75-1.75 1.75H4.25c-.966 0-1.75-.784-1.75-1.75V8.941z"/></svg>
+                    Open in Outlook (Web)
+                </a>
+
+                <a id="defaultMailBtn" href="#" class="btn-email-option btn-default-mail">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    Open Default Email App
+                </a>
+
+                <button type="button" onclick="copyRequestText()" class="btn-email-option btn-copy">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    Copy Request Details
+                </button>
+            </div>
+
+            <textarea id="copyText" rows="6" readonly class="details-box"></textarea>
         </div>
         
-        <a href="delete-account.html" class="back-link">&larr; Back to Options</a>
+        <a href="delete-account.html" class="back-link">&larr; Back to Account Options</a>
+    </div>
+
+    <!-- Success Dialog Modal Overlay -->
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="success-badge">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <h2>Request Ready to Send!</h2>
+            <p>Your deletion request email has been prepared. Please click <strong>Send</strong> in your email composer to submit it to our support team.</p>
+            
+            <div class="modal-summary-box">
+                <div class="modal-summary-item">
+                    <span class="modal-summary-label">Name:</span>
+                    <span id="summaryName" class="modal-summary-val">-</span>
+                </div>
+                <div class="modal-summary-item">
+                    <span class="modal-summary-label">Email:</span>
+                    <span id="summaryEmail" class="modal-summary-val">-</span>
+                </div>
+                <div class="modal-summary-item">
+                    <span class="modal-summary-label">Support Email:</span>
+                    <span class="modal-summary-val">healthtracker.support@gmail.com</span>
+                </div>
+            </div>
+
+            <button type="button" onclick="closeSuccessModal()" class="btn-modal-action">Got It / Continue</button>
+        </div>
     </div>
 
     <script>
@@ -166,35 +414,88 @@
             var copyText = document.getElementById("copyText");
             copyText.select();
             copyText.setSelectionRange(0, 99999);
-            navigator.clipboard.writeText(copyText.value);
-            alert("Copied request details to clipboard!");
+            navigator.clipboard.writeText(copyText.value).then(function() {
+                alert("Request details copied to clipboard!");
+            }).catch(function() {
+                document.execCommand('copy');
+                alert("Request details copied to clipboard!");
+            });
+        }
+
+        function closeSuccessModal() {
+            document.getElementById("successModal").classList.remove("active");
         }
 
         document.getElementById('deletionForm').addEventListener('submit', function(event) {
             event.preventDefault();
             
-            var name = document.getElementById('name').value;
-            var email = document.getElementById('email').value;
-            var phone = document.getElementById('phone').value;
-            var reason = document.getElementById('reason').value;
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var phone = document.getElementById('phone').value.trim() || "Not provided";
+            var reason = document.getElementById('reason').value.trim() || "Not provided";
             
-            var bodyText = "Hello Admin,\n\nI would like to request the deletion of my account and all associated data.\n\n" + 
-                           "Here are my details:\n" + 
-                           "- Name: " + name + "\n" + 
+            var targetEmail = "healthtracker.support@gmail.com";
+            var subjectText = "Health Tracker App Account Deletion Request";
+            
+            var bodyText = "Hello Admin,\n\n" +
+                           "I would like to request the permanent deletion of my account and all associated personal data.\n\n" + 
+                           "Here are my account details:\n" + 
+                           "- Full Name: " + name + "\n" + 
                            "- Registered Email: " + email + "\n" + 
-                           "- Phone: " + phone + "\n" + 
-                           "- Reason: " + reason + "\n\nPlease process this request within 7 business days.\n\nThank you.";
+                           "- Phone/WhatsApp: " + phone + "\n" + 
+                           "- Reason for Deletion: " + reason + "\n\n" +
+                           "Please process this request and confirm once completed.\n\n" +
+                           "Thank you,\n" + name;
             
-            // Populate fallback text area and display the copy helper
+            // Populate fallback text area & modal summary
             document.getElementById('copyText').value = bodyText;
-            document.getElementById('fallbackModal').style.display = 'block';
+            document.getElementById('summaryName').textContent = name;
+            document.getElementById('summaryEmail').textContent = email;
             
-            // Try to open system mail client
-            var mailtoUrl = "mailto:healthtracker.support@gmail.com" + 
-                            "?subject=" + encodeURIComponent("Health Tracker App Account Deletion Request") + 
+            // Mailto URL
+            var mailtoUrl = "mailto:" + targetEmail + 
+                            "?subject=" + encodeURIComponent(subjectText) + 
                             "&body=" + encodeURIComponent(bodyText);
+
+            // Web Gmail URL
+            var gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(targetEmail) +
+                           "&su=" + encodeURIComponent(subjectText) +
+                           "&body=" + encodeURIComponent(bodyText);
+
+            // Web Outlook URL
+            var outlookUrl = "https://outlook.live.com/mail/0/deeplink/compose?to=" + encodeURIComponent(targetEmail) +
+                             "&subject=" + encodeURIComponent(subjectText) +
+                             "&body=" + encodeURIComponent(bodyText);
+
+            // Set button hrefs
+            document.getElementById('gmailWebBtn').href = gmailUrl;
+            document.getElementById('outlookWebBtn').href = outlookUrl;
+            document.getElementById('defaultMailBtn').href = mailtoUrl;
             
-            window.location.href = mailtoUrl;
+            // Display the email options card
+            var card = document.getElementById('emailOptionsCard');
+            card.style.display = 'block';
+
+            // Show Success Dialog Modal
+            document.getElementById("successModal").classList.add("active");
+
+            // 1. Attempt mailto via programmatic hidden anchor click (works across desktop & mobile)
+            try {
+                var tempLink = document.createElement('a');
+                tempLink.href = mailtoUrl;
+                document.body.appendChild(tempLink);
+                tempLink.click();
+                document.body.removeChild(tempLink);
+            } catch(e) {
+                console.log("Mailto launch attempt:", e);
+            }
+
+            // 2. On desktop Web browsers, if mailto doesn't launch or no native mail client exists,
+            // also attempt opening Gmail in new tab after a tiny delay if on desktop
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (!isMobile) {
+                window.open(gmailUrl, '_blank');
+            }
         });
     </script>
 </body>
