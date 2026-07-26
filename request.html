@@ -153,7 +153,7 @@
         <!-- Fallback Modal for Clipboard Copying -->
         <div id="fallbackModal" class="fallback-modal">
             <h3>Request Prepared!</h3>
-            <p>If your email app didn't open automatically, please send an email to <strong>admin.healthtracker@gmail.com</strong> with the details below:</p>
+            <p>If your email app didn't open automatically, please send an email to <strong>healthtracker.support@gmail.com</strong> with the details below:</p>
             <textarea id="copyText" rows="7" readonly style="width:100%; padding:10px; font-family:monospace; font-size:12.5px; border-radius:6px; border:1px solid #FFE0B2; background-color:#FFF; box-sizing:border-box; color:#2D3748;"></textarea>
             <button onclick="copyRequestText()" class="btn-copy">Copy Details to Clipboard</button>
         </div>
@@ -190,7 +190,7 @@
             document.getElementById('fallbackModal').style.display = 'block';
             
             // Try to open system mail client
-            var mailtoUrl = "mailto:admin.healthtracker@gmail.com" + 
+            var mailtoUrl = "mailto:healthtracker.support@gmail.com" + 
                             "?subject=" + encodeURIComponent("Health Tracker App Account Deletion Request") + 
                             "&body=" + encodeURIComponent(bodyText);
             
