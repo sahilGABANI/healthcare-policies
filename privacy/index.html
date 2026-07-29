@@ -1,215 +1,438 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Health Tracker App</title>
-    <link rel="icon" type="image/png" href="https://healthtrackapp.com/images/app_icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="https://healthtrackapp.com/favicon.ico">
-    <link rel="apple-touch-icon" href="https://healthtrackapp.com/images/app_icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Privacy Policy - Health Tracker">
+    <meta name="description" content="Privacy Policy for Health Tracker mobile application. Learn about data collection, user privacy, security, and data deletion policies.">
+    <meta name="theme-color" content="#16a34a">
+    <meta name="apple-mobile-web-app-title" content="Health Tracker">
+    <meta name="application-name" content="Health Tracker">
+
+    <!-- Open Graph / Facebook / Instagram / WhatsApp / Telegram / iMessage / LinkedIn / Discord -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://healthtrackapp.com/privacy">
+    <meta property="og:site_name" content="Health Tracker">
+    <meta property="og:title" content="Privacy Policy - Health Tracker">
+    <meta property="og:description" content="Privacy Policy for Health Tracker mobile application. Learn about data collection, user privacy, security, and data deletion policies.">
+    <meta property="og:image" content="https://healthtrackapp.com/images/play_store_512.png">
+    <meta property="og:image:secure_url" content="https://healthtrackapp.com/images/play_store_512.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="Health Tracker Logo">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter / X Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://healthtrackapp.com/privacy">
+    <meta name="twitter:title" content="Privacy Policy - Health Tracker">
+    <meta name="twitter:description" content="Privacy Policy for Health Tracker mobile application. Learn about data collection, user privacy, security, and data deletion policies.">
+    <meta name="twitter:image" content="https://healthtrackapp.com/images/play_store_512.png">
+    <meta name="twitter:image:alt" content="Health Tracker Logo">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/images/app_icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/app_icon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-section: #f1f5f9;
+            --border-color: #e2e8f0;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --text-heading: #0f172a;
+            --brand-primary: #16a34a;
+            --brand-primary-hover: #15803d;
+            --brand-bg: rgba(22, 163, 74, 0.08);
+            --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+        }
+
+        [data-theme="dark"] {
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --bg-section: #0f172a;
+            --border-color: #334155;
+            --text-main: #cbd5e1;
+            --text-muted: #94a3b8;
+            --text-heading: #f8fafc;
+            --brand-primary: #4ade80;
+            --brand-primary-hover: #22c55e;
+            --brand-bg: rgba(74, 222, 128, 0.12);
+            --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --bg-body: #0f172a;
+                --bg-card: #1e293b;
+                --bg-section: #0f172a;
+                --border-color: #334155;
+                --text-main: #cbd5e1;
+                --text-muted: #94a3b8;
+                --text-heading: #f8fafc;
+                --brand-primary: #4ade80;
+                --brand-primary-hover: #22c55e;
+                --brand-bg: rgba(74, 222, 128, 0.12);
+                --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.7;
-            color: #2D3748;
-            background-color: #F7FAFC;
+            color: var(--text-main);
+            background-color: var(--bg-body);
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
         }
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            border: 1px solid #E2E8F0;
-            max-width: 800px;
-            margin: 40px auto;
+
+        /* Main Layout */
+        .main-container {
+            max-width: 860px;
+            margin: 40px auto 60px auto;
+            padding: 0 20px;
         }
-        .brand-header {
+
+        .document-card {
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            padding: 40px 36px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Embedded Brand Header (Clean Logo & Title Alignment) */
+        .brand-header-block {
             display: flex;
             align-items: center;
-            gap: 14px;
-            margin-bottom: 20px;
+            gap: 16px;
+            margin-bottom: 16px;
         }
+
+        .brand-logo-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
         .brand-logo {
-            width: 52px;
-            height: 52px;
+            width: 48px;
+            height: 48px;
             border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            object-fit: contain;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
         }
-        .brand-title {
-            font-size: 22px;
+
+        .brand-title-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .brand-app-name {
+            font-size: 13px;
             font-weight: 700;
-            color: #2E7D32;
+            color: var(--brand-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            line-height: 1.3;
         }
+
         h1 {
-            color: #2E7D32;
+            color: var(--text-heading);
             font-size: 28px;
             font-weight: 700;
-            margin-top: 0;
-            margin-bottom: 8px;
-            border-bottom: 2px solid #E8F5E9;
-            padding-bottom: 12px;
+            margin: 2px 0 0 0;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
         }
+
+        .doc-header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 28px;
+        }
+
         .last-updated {
-            font-size: 13px;
-            color: #718096;
-            margin-bottom: 24px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13.5px;
+            font-weight: 500;
+            color: var(--text-muted);
+            background-color: var(--bg-section);
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            margin-top: 6px;
         }
+
+        /* Sections & Typography */
         h2 {
-            color: #1A202C;
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 28px;
-            margin-bottom: 12px;
-            padding-left: 8px;
-            border-left: 4px solid #4CAF50;
+            color: var(--text-heading);
+            font-size: 21px;
+            font-weight: 700;
+            margin-top: 36px;
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 4px solid var(--brand-primary);
+            scroll-margin-top: 30px;
         }
+
         h3 {
             font-size: 16px;
-            color: #2E7D32;
+            color: var(--brand-primary);
             font-weight: 600;
-            margin-top: 16px;
+            margin-top: 4px;
             margin-bottom: 8px;
         }
+
         p {
-            font-size: 15px;
-            color: #4A5568;
-            margin-bottom: 16px;
+            font-size: 15.5px;
+            color: var(--text-main);
+            margin-bottom: 18px;
         }
+
         .section-card {
-            background-color: #F8FAFC;
-            padding: 16px;
-            border-radius: 12px;
-            border: 1px solid #EDF2F7;
+            background-color: var(--bg-section);
+            padding: 20px;
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 22px;
+            margin-top: 8px;
             margin-bottom: 16px;
         }
-        ul {
-            padding-left: 20px;
-            margin-top: 8px;
+
+        li {
+            font-size: 15px;
+            color: var(--text-main);
             margin-bottom: 8px;
         }
-        li {
-            font-size: 14.5px;
-            color: #4A5568;
-            margin-bottom: 6px;
-        }
-        .footer {
-            margin-top: 36px;
-            text-align: center;
-            font-size: 12px;
-            color: #A0AEC0;
-            border-top: 1px solid #EDF2F7;
-            padding-top: 16px;
-        }
+
         a {
-            color: #4CAF50;
+            color: var(--brand-primary);
             text-decoration: none;
+            font-weight: 500;
         }
+
         a:hover {
             text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 48px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 24px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 640px) {
+            .main-container {
+                margin: 16px auto 32px auto;
+                padding: 0 12px;
+            }
+            .document-card {
+                padding: 24px 18px;
+                border-radius: 16px;
+            }
+            .brand-logo {
+                width: 42px;
+                height: 42px;
+                border-radius: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <div class="last-updated">Last Updated: July 26, 2026</div>
-        
-        <p>This privacy policy governs your use of the software application <strong>Health Tracker</strong> ("Application") for mobile devices. The Application is a health and lifestyle utility designed to help users track water consumption, calculate Body Mass Index (BMI), log weight progress, and view daily health tips.</p>
-        <p>For terms relating to usage constraints and medical disclaimers, please read our <a href="/terms">Terms of Use</a>.</p>
 
-        <h2>1. Information Collection and Use</h2>
-        <p>We are committed to protecting your privacy. The Application collects user data to provide and improve its services. This data is split between local storage on your device and secure cloud storage:</p>
-        
-        <div class="section-card">
-            <h3>A. Cloud Storage (Firebase Firestore)</h3>
-            <p>To enable account registration, profile recovery, and interactive questionnaire submissions, we store the following parameters securely on Firebase servers:</p>
+    <!-- Main Container -->
+    <main class="main-container">
+        <article class="document-card">
+            
+            <!-- Embedded Brand Header with App Logo, Name & Title -->
+            <div class="doc-header">
+                <div class="brand-header-block">
+                    <div class="brand-logo-wrapper">
+                        <img src="/images/app_icon.png" alt="Health Tracker Logo" class="brand-logo" onerror="this.onerror=null; this.src='../images/app_icon.png';">
+                    </div>
+                    <div class="brand-title-group">
+                        <span class="brand-app-name">Health Tracker</span>
+                        <h1>Privacy Policy</h1>
+                    </div>
+                </div>
+                <div class="last-updated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    Last Updated: July 29, 2026
+                </div>
+            </div>
+
+            <p>This privacy policy governs your use of the software application <strong>Health Tracker</strong> ("Application") for mobile devices. The Application is a health and lifestyle utility designed to help users track water consumption, calculate Body Mass Index (BMI), log weight progress, and view daily health tips.</p>
+            <p>For terms relating to usage constraints and medical disclaimers, please read our <a href="/terms">Terms of Use</a>.</p>
+
+            <h2>1. Information Collection and Use</h2>
+            <p>We are committed to protecting your privacy. The Application collects user data to provide and improve its services. This data is split between local storage on your device and secure cloud storage:</p>
+            
+            <div class="section-card">
+                <h3>A. Cloud Storage (Firebase Firestore)</h3>
+                <p>To enable account registration, profile recovery, and interactive questionnaire submissions, we store the following parameters securely on Firebase servers:</p>
+                <ul>
+                    <li><strong>Authentication Info</strong>: Your email address and login credentials (managed securely via Firebase Authentication).</li>
+                    <li><strong>User Profile Parameters</strong>: Full Name, Age, Height, Current Weight, Target Weight, WhatsApp Number, and City.</li>
+                    <li><strong>Questionnaire Responses</strong>: Answers submitted to assessments.</li>
+                </ul>
+            </div>
+
+            <div class="section-card">
+                <h3>B. Local Storage (SharedPreferences)</h3>
+                <p>All fitness logging data, specifically:</p>
+                <ul>
+                    <li>Daily water intake logging progress.</li>
+                    <li>Weight logs and progress updates.</li>
+                </ul>
+                <p>are saved locally on your device for fast access and to minimize internet consumption. This local data is not shared with third parties.</p>
+            </div>
+
+            <h2>2. Third-Party Services</h2>
+            <p>The Application utilizes third-party services that collect data to facilitate core functionalities. These services include:</p>
             <ul>
-                <li><strong>Authentication Info</strong>: Your email address and login credentials (managed securely via Firebase Authentication).</li>
-                <li><strong>User Profile Parameters</strong>: Full Name, Age, Height, Current Weight, Target Weight, WhatsApp Number, and City.</li>
-                <li><strong>Questionnaire Responses</strong>: Answers submitted to assessments.</li>
+                <li><strong>Google Play Services</strong>: Used for system-level API connections.</li>
+                <li><strong>Firebase Authentication</strong>: Used to authenticate users securely.</li>
+                <li><strong>Google Firebase Firestore</strong>: Used to save user profiles and questionnaires.</li>
+                <li><strong>Firebase Crashlytics</strong>: Used to log crash data and errors.</li>
             </ul>
-        </div>
 
-        <div class="section-card">
-            <h3>B. Local Storage (SharedPreferences)</h3>
-            <p>All fitness logging data, specifically:</p>
+            <h2>3. Data Retention Policy</h2>
+            <p>We retain user data only for as long as necessary to fulfill the operational purposes outlined in this Privacy Policy, or as required to comply with legal obligations. Our specific data retention practices are as follows:</p>
+            
+            <div class="section-card">
+                <h3>A. Active Account User Data (Cloud Storage)</h3>
+                <p>Personal profile parameters, authentication details, and questionnaire responses stored in Google Firebase Firestore and Firebase Authentication are retained for as long as your account remains active. If your account remains inactive or if you request account deletion, your cloud data will be handled according to our deletion timelines.</p>
+            </div>
+
+            <div class="section-card">
+                <h3>B. Data Retention Upon Account Deletion</h3>
+                <p>Upon user-initiated account deletion (via the in-app <strong>Delete Account</strong> option or our web-based <a href="/delete-account">Account Deletion Page</a> / <a href="/request">Request Form</a>):</p>
+                <ul>
+                    <li><strong>In-App Deletion</strong>: Cloud profile records in Firestore and Firebase Authentication credentials are deleted immediately and permanently.</li>
+                    <li><strong>Web Form Requests</strong>: Account deletion requests submitted via our web portal are processed and permanently removed from our cloud databases within <strong>7 to 30 days</strong> of request verification.</li>
+                </ul>
+                <p>We explicitly state that we do not store, retain, or backup your personal data after account deletion has been completed.</p>
+            </div>
+
+            <div class="section-card">
+                <h3>C. Local Device Storage Retention</h3>
+                <p>Water intake logs and weight progress data stored locally in device storage (SharedPreferences) remain on your device until you clear the application storage/cache through system settings, uninstall the Application, or trigger an account deletion in-app.</p>
+            </div>
+
+            <div class="section-card">
+                <h3>D. Diagnostic & Crash Logs</h3>
+                <p>Anonymized error logs and performance statistics collected via Firebase Crashlytics are retained for up to <strong>90 days</strong> strictly to analyze application stability and repair software bugs, after which they are automatically purged.</p>
+            </div>
+
+            <h2>4. User Account and Data Deletion</h2>
+            <p>In compliance with Google Play Store developer policies, users have full control over their data:</p>
             <ul>
-                <li>Daily water intake logging progress.</li>
-                <li>Weight logs and progress updates.</li>
+                <li><strong>In-App Deletion</strong>: You can delete your account and all associated data at any time from within the application by navigating to the <strong>Profile Screen</strong> and tapping <strong>Delete Account</strong>.</li>
+                <li><strong>Web Deletion Portal</strong>: If you have uninstalled the Application or cannot access your account, you can request account deletion online by visiting our <a href="/delete-account">Account Deletion & Data Removal Page</a> or submitting a web request via our <a href="/request">Deletion Request Form</a>.</li>
+                <li>Confirming deletion will immediately and permanently delete your user profile document from Firestore, remove your authentication credentials from Firebase, and clear all local logging caches.</li>
             </ul>
-            <p>are saved locally on your device for fast access and to minimize internet consumption. This local data is not shared with third parties.</p>
-        </div>
 
-        <h2>2. Third-Party Services</h2>
-        <p>The Application utilizes third-party services that collect data to facilitate core functionalities. These services include:</p>
-        <ul>
-            <li><strong>Google Play Services</strong>: Used for system-level API connections.</li>
-            <li><strong>Firebase Authentication</strong>: Used to authenticate users securely.</li>
-            <li><strong>Google Firebase Firestore</strong>: Used to save user profiles and questionnaires.</li>
-            <li><strong>Firebase Crashlytics</strong>: Used to log crash data and errors.</li>
-        </ul>
+            <h2>5. Data Security & Non-Sharing Policy</h2>
+            <p>We take security seriously. All data transmitted between the Application and Firebase is encrypted in transit using industry-standard Secure Socket Layer (SSL) / Transport Layer Security (TLS) protocols. Cloud databases are protected by strict Firebase Security Rules that limit data access solely to the authenticated owner of the profile.</p>
+            <div class="section-card">
+                <h3>No Commercial Sharing or Sale of Personal Data</h3>
+                <p>We explicitly state that we <strong>do not sell, rent, trade, or share</strong> your personal information, contact numbers, or health logging data with third-party advertisers, data brokers, or marketing networks. All health logging parameters (hydration progress, weight history, BMI) are utilized strictly to provide personal fitness tracking services within the Application.</p>
+            </div>
 
-        <h2>3. Data Retention Policy</h2>
-        <p>We retain user data only for as long as necessary to fulfill the operational purposes outlined in this Privacy Policy, or as required to comply with legal obligations. Our specific data retention practices are as follows:</p>
-        
-        <div class="section-card">
-            <h3>A. Active Account User Data (Cloud Storage)</h3>
-            <p>Personal profile parameters, authentication details, and questionnaire responses stored in Google Firebase Firestore and Firebase Authentication are retained for as long as your account remains active. If your account remains inactive or if you request account deletion, your cloud data will be handled according to our deletion timelines.</p>
-        </div>
+            <h2>6. Health Data & Medical Privacy</h2>
+            <p>The Application is designed strictly as a personal wellness and habit tracking utility. Health parameters collected are used solely to present progress metrics and personalized utility features to you within the Application. We do not use health data for cross-site tracking or advertising. For medical disclaimers, please consult our <a href="/terms">Terms of Use</a>.</p>
 
-        <div class="section-card">
-            <h3>B. Data Retention Upon Account Deletion</h3>
-            <p>Upon user-initiated account deletion (via the in-app <strong>Delete Account</strong> option or our web-based <a href="/delete-account">Account Deletion Page</a> / <a href="/request">Request Form</a>):</p>
-            <ul>
-                <li><strong>In-App Deletion</strong>: Cloud profile records in Firestore and Firebase Authentication credentials are deleted immediately and permanently.</li>
-                <li><strong>Web Form Requests</strong>: Account deletion requests submitted via our web portal are processed and permanently removed from our cloud databases within <strong>7 to 30 days</strong> of request verification.</li>
-            </ul>
-            <p>We explicitly state that we do not store, retain, or backup your personal data after account deletion has been completed.</p>
-        </div>
+            <h2>7. Children's Privacy</h2>
+            <p>This Application does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If we discover that a child under 13 has provided us with personal information, we will delete this from our servers immediately.</p>
 
-        <div class="section-card">
-            <h3>C. Local Device Storage Retention</h3>
-            <p>Water intake logs and weight progress data stored locally in device storage (SharedPreferences) remain on your device until you clear the application storage/cache through system settings, uninstall the Application, or trigger an account deletion in-app.</p>
-        </div>
+            <h2>8. Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy from time to time to reflect changes in our legal obligations or application functionalities. You are advised to review this page periodically for any changes. Updates are effective immediately upon posting to this page, as indicated by the "Last Updated" date at the top.</p>
 
-        <div class="section-card">
-            <h3>D. Diagnostic & Crash Logs</h3>
-            <p>Anonymized error logs and performance statistics collected via Firebase Crashlytics are retained for up to <strong>90 days</strong> strictly to analyze application stability and repair software bugs, after which they are automatically purged.</p>
-        </div>
+            <h2>9. Contact Us</h2>
+            <p>If you have any questions or suggestions about our Privacy Policy, Data Retention practices, or data deletion procedures, do not hesitate to contact us at <strong>healthtracker.support@gmail.com</strong>.</p>
+            
+            <footer class="footer">
+                <p>&copy; 2026 Health Tracker App. All rights reserved. | <a href="/terms">Terms of Use</a> | <a href="/delete-account">Delete Account</a></p>
+            </footer>
 
-        <h2>4. User Account and Data Deletion</h2>
-        <p>In compliance with Google Play Store developer policies, users have full control over their data:</p>
-        <ul>
-            <li><strong>In-App Deletion</strong>: You can delete your account and all associated data at any time from within the application by navigating to the <strong>Profile Screen</strong> and tapping <strong>Delete Account</strong>.</li>
-            <li><strong>Web Deletion Portal</strong>: If you have uninstalled the Application or cannot access your account, you can request account deletion online by visiting our <a href="/delete-account">Account Deletion & Data Removal Page</a> or submitting a web request via our <a href="/request">Deletion Request Form</a>.</li>
-            <li>Confirming deletion will immediately and permanently delete your user profile document from Firestore, remove your authentication credentials from Firebase, and clear all local logging caches.</li>
-        </ul>
+        </article>
+    </main>
 
-        <h2>5. Data Security & Non-Sharing Policy</h2>
-        <p>We take security seriously. All data transmitted between the Application and Firebase is encrypted in transit using industry-standard Secure Socket Layer (SSL) / Transport Layer Security (TLS) protocols. Cloud databases are protected by strict Firebase Security Rules that limit data access solely to the authenticated owner of the profile.</p>
-        <div class="section-card">
-            <h3>No Commercial Sharing or Sale of Personal Data</h3>
-            <p>We explicitly state that we <strong>do not sell, rent, trade, or share</strong> your personal information, contact numbers, or health logging data with third-party advertisers, data brokers, or marketing networks. All health logging parameters (hydration progress, weight history, BMI) are utilized strictly to provide personal fitness tracking services within the Application.</p>
-        </div>
+    <!-- Theme Handling Script (URL Parameter, Local Storage, System Preference) -->
+    <script>
+        (function() {
+            function determineTheme() {
+                // 1. Check URL query parameters (?theme=dark or ?theme=light)
+                const urlParams = new URLSearchParams(window.location.search);
+                const urlTheme = urlParams.get('theme');
+                if (urlTheme === 'dark' || urlTheme === 'light') {
+                    return urlTheme;
+                }
 
-        <h2>6. Health Data & Medical Privacy</h2>
-        <p>The Application is designed strictly as a personal wellness and habit tracking utility. Health parameters collected are used solely to present progress metrics and personalized utility features to you within the Application. We do not use health data for cross-site tracking or advertising. For medical disclaimers, please consult our <a href="/terms">Terms of Use</a>.</p>
+                // 2. Check localStorage
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark' || savedTheme === 'light') {
+                    return savedTheme;
+                }
 
-        <h2>7. Children's Privacy</h2>
-        <p>This Application does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If we discover that a child under 13 has provided us with personal information, we will delete this from our servers immediately.</p>
+                // 3. Fallback to OS system preference
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
 
-        <h2>8. Changes to This Privacy Policy</h2>
-        <p>We may update our Privacy Policy from time to time to reflect changes in our legal obligations or application functionalities. You are advised to review this page periodically for any changes. Updates are effective immediately upon posting to this page, as indicated by the "Last Updated" date at the top.</p>
+            const theme = determineTheme();
+            document.documentElement.setAttribute('data-theme', theme);
 
-        <h2>9. Contact Us</h2>
-        <p>If you have any questions or suggestions about our Privacy Policy, Data Retention practices, or data deletion procedures, do not hesitate to contact us at <strong>healthtracker.support@gmail.com</strong>.</p>
-        
-        <div class="footer">
-            <p>&copy; 2026 Health Tracker App. All rights reserved.</p>
-        </div>
-    </div>
+            // Listen for system theme changes if no explicit theme override is present
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+                const urlParams = new URLSearchParams(window.location.search);
+                if (!urlParams.has('theme') && !localStorage.getItem('theme')) {
+                    document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
