@@ -53,7 +53,6 @@
             --brand-primary-hover: #15803d;
             --brand-bg: rgba(22, 163, 74, 0.08);
             --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
-            --toc-bg: #f8fafc;
         }
 
         [data-theme="dark"] {
@@ -71,7 +70,6 @@
             --brand-primary-hover: #22c55e;
             --brand-bg: rgba(74, 222, 128, 0.12);
             --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
-            --toc-bg: #0f172a;
         }
 
         @media (prefers-color-scheme: dark) {
@@ -90,7 +88,6 @@
                 --brand-primary-hover: #22c55e;
                 --brand-bg: rgba(74, 222, 128, 0.12);
                 --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
-                --toc-bg: #0f172a;
             }
         }
 
@@ -201,53 +198,6 @@
             color: var(--text-main);
             line-height: 1.75;
             margin-bottom: 24px;
-        }
-
-        /* Table of Contents Navigator */
-        .toc-container {
-            background-color: var(--toc-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 16px 20px;
-            margin-bottom: 32px;
-        }
-
-        .toc-title {
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-        }
-
-        .toc-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
-
-        .toc-item a {
-            display: inline-block;
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--text-main);
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 6px 12px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: all 0.15s ease;
-        }
-
-        .toc-item a:hover {
-            color: var(--brand-primary);
-            border-color: var(--brand-primary);
-            background-color: var(--brand-bg);
-            transform: translateY(-1px);
         }
 
         /* Sections & Typography */
@@ -385,27 +335,12 @@
                 </div>
                 <div class="last-updated">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                    Last Updated: July 4, 2026
+                    Last Updated: July 29, 2026
                 </div>
             </div>
 
             <p class="intro-lead">Welcome to <strong>Health Tracker</strong> ("Application"). By installing, accessing, or using this application, you agree to comply with and be bound by the following terms and conditions of use. If you do not agree to these terms, please do not use the Application.</p>
             <p>For details on how we collect, handle, and protect your personal data, please review our <a href="/privacy">Privacy Policy</a>.</p>
-
-            <!-- Table of Contents Navigator -->
-            <nav class="toc-container" aria-label="Table of Contents">
-                <div class="toc-title">Quick Navigation</div>
-                <ul class="toc-list">
-                    <li class="toc-item"><a href="#acceptance">1. Acceptance</a></li>
-                    <li class="toc-item"><a href="#description">2. Service Description</a></li>
-                    <li class="toc-item"><a href="#disclaimer">3. Medical Disclaimer</a></li>
-                    <li class="toc-item"><a href="#accounts">4. User Accounts</a></li>
-                    <li class="toc-item"><a href="#deletion">5. Data & Account Deletion</a></li>
-                    <li class="toc-item"><a href="#acceptable-use">6. Acceptable Use</a></li>
-                    <li class="toc-item"><a href="#liability">7. Liability Limits</a></li>
-                    <li class="toc-item"><a href="#contact">8. Contact Us</a></li>
-                </ul>
-            </nav>
 
             <section id="acceptance">
                 <h2>1. Acceptance of Terms</h2>
