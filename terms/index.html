@@ -4,163 +4,512 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Use - Health Tracker App</title>
-    <link rel="icon" type="image/png" href="https://healthtrackapp.com/images/app_icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="https://healthtrackapp.com/favicon.ico">
-    <link rel="apple-touch-icon" href="https://healthtrackapp.com/images/app_icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Terms of Use - Health Tracker App">
+    <meta name="description" content="Terms of Use and conditions for Health Tracker mobile application. Review our service terms, medical disclaimers, and user guidelines.">
+    <meta name="theme-color" content="#16a34a">
+
+    <!-- Open Graph / Facebook / WhatsApp / iMessage / LinkedIn Sharing Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://healthtrackapp.com/terms/">
+    <meta property="og:title" content="Terms of Use - Health Tracker App">
+    <meta property="og:description" content="Terms of Use and conditions for Health Tracker mobile application. Review our service terms, medical disclaimers, and user guidelines.">
+    <meta property="og:image" content="https://healthtrackapp.com/images/play_store_512.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:site_name" content="Health Tracker">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://healthtrackapp.com/terms/">
+    <meta property="twitter:title" content="Terms of Use - Health Tracker App">
+    <meta property="twitter:description" content="Terms of Use and conditions for Health Tracker mobile application. Review our service terms, medical disclaimers, and user guidelines.">
+    <meta property="twitter:image" content="https://healthtrackapp.com/images/play_store_512.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/images/app_icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/app_icon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-section: #f1f5f9;
+            --bg-warning: #fffbeb;
+            --border-color: #e2e8f0;
+            --border-warning: #fef08a;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --text-heading: #0f172a;
+            --text-warning: #92400e;
+            --brand-primary: #16a34a;
+            --brand-primary-hover: #15803d;
+            --brand-bg: rgba(22, 163, 74, 0.08);
+            --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+            --toc-bg: #f8fafc;
+        }
+
+        [data-theme="dark"] {
+            --bg-body: #0f172a;
+            --bg-card: #1e293b;
+            --bg-section: #0f172a;
+            --bg-warning: #261f0d;
+            --border-color: #334155;
+            --border-warning: #713f12;
+            --text-main: #cbd5e1;
+            --text-muted: #94a3b8;
+            --text-heading: #f8fafc;
+            --text-warning: #fde047;
+            --brand-primary: #4ade80;
+            --brand-primary-hover: #22c55e;
+            --brand-bg: rgba(74, 222, 128, 0.12);
+            --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+            --toc-bg: #0f172a;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --bg-body: #0f172a;
+                --bg-card: #1e293b;
+                --bg-section: #0f172a;
+                --bg-warning: #261f0d;
+                --border-color: #334155;
+                --border-warning: #713f12;
+                --text-main: #cbd5e1;
+                --text-muted: #94a3b8;
+                --text-heading: #f8fafc;
+                --text-warning: #fde047;
+                --brand-primary: #4ade80;
+                --brand-primary-hover: #22c55e;
+                --brand-bg: rgba(74, 222, 128, 0.12);
+                --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+                --toc-bg: #0f172a;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.7;
-            color: #2D3748;
-            background-color: #F7FAFC;
+            color: var(--text-main);
+            background-color: var(--bg-body);
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
         }
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            border: 1px solid #E2E8F0;
-            max-width: 800px;
-            margin: 40px auto;
+
+        /* Main Layout */
+        .main-container {
+            max-width: 860px;
+            margin: 40px auto 60px auto;
+            padding: 0 20px;
         }
-        .brand-header {
+
+        .document-card {
+            background-color: var(--bg-card);
+            border-radius: 20px;
+            padding: 40px 36px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Embedded Brand Header (Clean Logo & Title Alignment) */
+        .brand-header-block {
             display: flex;
             align-items: center;
-            gap: 14px;
-            margin-bottom: 20px;
+            gap: 16px;
+            margin-bottom: 16px;
         }
+
+        .brand-logo-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
         .brand-logo {
-            width: 52px;
-            height: 52px;
+            width: 48px;
+            height: 48px;
             border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            object-fit: contain;
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
         }
-        .brand-title {
-            font-size: 22px;
+
+        .brand-title-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .brand-app-name {
+            font-size: 13px;
             font-weight: 700;
-            color: #2E7D32;
+            color: var(--brand-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            line-height: 1.3;
         }
+
         h1 {
-            color: #2E7D32;
+            color: var(--text-heading);
             font-size: 28px;
             font-weight: 700;
-            margin-top: 0;
-            margin-bottom: 8px;
-            border-bottom: 2px solid #E8F5E9;
-            padding-bottom: 12px;
+            margin: 2px 0 0 0;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
         }
+
+        .doc-header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 28px;
+        }
+
         .last-updated {
-            font-size: 13px;
-            color: #718096;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13.5px;
+            font-weight: 500;
+            color: var(--text-muted);
+            background-color: var(--bg-section);
+            padding: 4px 12px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            margin-top: 6px;
+        }
+
+        .intro-lead {
+            font-size: 16.5px;
+            color: var(--text-main);
+            line-height: 1.75;
             margin-bottom: 24px;
         }
-        h2 {
-            color: #1A202C;
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 28px;
+
+        /* Table of Contents Navigator */
+        .toc-container {
+            background-color: var(--toc-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 16px 20px;
+            margin-bottom: 32px;
+        }
+
+        .toc-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
             margin-bottom: 12px;
-            padding-left: 8px;
-            border-left: 4px solid #4CAF50;
         }
+
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .toc-item a {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-main);
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 6px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.15s ease;
+        }
+
+        .toc-item a:hover {
+            color: var(--brand-primary);
+            border-color: var(--brand-primary);
+            background-color: var(--brand-bg);
+            transform: translateY(-1px);
+        }
+
+        /* Sections & Typography */
+        h2 {
+            color: var(--text-heading);
+            font-size: 21px;
+            font-weight: 700;
+            margin-top: 36px;
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 4px solid var(--brand-primary);
+            scroll-margin-top: 30px;
+        }
+
         p {
-            font-size: 15px;
-            color: #4A5568;
-            margin-bottom: 16px;
+            font-size: 15.5px;
+            color: var(--text-main);
+            margin-bottom: 18px;
         }
+
         .section-card {
-            background-color: #F8FAFC;
-            padding: 16px;
-            border-radius: 12px;
-            border: 1px solid #EDF2F7;
+            background-color: var(--bg-section);
+            padding: 20px;
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .section-card h3 {
+            margin-top: 0;
+            color: var(--text-heading);
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 22px;
+            margin-top: 8px;
             margin-bottom: 16px;
         }
-        ul {
-            padding-left: 20px;
-            margin-top: 8px;
+
+        li {
+            font-size: 15px;
+            color: var(--text-main);
             margin-bottom: 8px;
         }
-        li {
-            font-size: 14.5px;
-            color: #4A5568;
-            margin-bottom: 6px;
-        }
+
+        /* Highlight Warning Box */
         .important-alert {
-            background-color: #FFFDE7;
-            border-left: 4px solid #FBC02D;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 16px;
-            border: 1px solid #FFF59D;
+            background-color: var(--bg-warning);
+            border-left: 4px solid #f59e0b;
+            border: 1px solid var(--border-warning);
+            border-left-width: 4px;
+            padding: 22px;
+            border-radius: 14px;
+            margin: 28px 0;
         }
+
         .important-alert h3 {
             margin-top: 0;
-            color: #F57F17;
-            font-size: 16px;
-            font-weight: 600;
+            color: var(--text-warning);
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
         }
-        .footer {
-            margin-top: 36px;
-            text-align: center;
-            font-size: 12px;
-            color: #A0AEC0;
-            border-top: 1px solid #EDF2F7;
-            padding-top: 16px;
+
+        .important-alert p, .important-alert li {
+            color: var(--text-warning);
         }
+
         a {
-            color: #4CAF50;
+            color: var(--brand-primary);
             text-decoration: none;
+            font-weight: 500;
         }
+
         a:hover {
             text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 48px;
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 24px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 640px) {
+            .main-container {
+                margin: 16px auto 32px auto;
+                padding: 0 12px;
+            }
+            .document-card {
+                padding: 24px 18px;
+                border-radius: 16px;
+            }
+            .brand-logo {
+                width: 42px;
+                height: 42px;
+                border-radius: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Terms of Use</h1>
-        <div class="last-updated">Last Updated: July 4, 2026</div>
-        
-        <p>Welcome to <strong>Health Tracker</strong> ("Application"). By installing and using this mobile application, you agree to comply with and be bound by the following terms and conditions of use. If you do not agree to these terms, please do not use the Application.</p>
-        <p>For details on data collection and deletion practices, please read our <a href="/privacy">Privacy Policy</a>.</p>
 
-        <h2>1. Acceptance of Terms</h2>
-        <p>By accessing or using the Application, you accept and agree to be bound by these Terms of Use and our Privacy Policy.</p>
+    <!-- Main Container -->
+    <main class="main-container">
+        <article class="document-card">
+            
+            <!-- Embedded Brand Header with App Logo, Name & Title -->
+            <div class="doc-header">
+                <div class="brand-header-block">
+                    <div class="brand-logo-wrapper">
+                        <img src="/images/app_icon.png" alt="Health Tracker Logo" class="brand-logo" onerror="this.onerror=null; this.src='../images/app_icon.png';">
+                    </div>
+                    <div class="brand-title-group">
+                        <span class="brand-app-name">Health Tracker</span>
+                        <h1>Terms of Use</h1>
+                    </div>
+                </div>
+                <div class="last-updated">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    Last Updated: July 4, 2026
+                </div>
+            </div>
 
-        <h2>2. Description of Service</h2>
-        <p>Health Tracker is a mobile tool designed to help users manage their lifestyle habits. It provides functionalities to track water consumption, calculate Body Mass Index (BMI), log weight entries, and display healthy tips. The Application is intended for informational and habit-building logging purposes only.</p>
+            <p class="intro-lead">Welcome to <strong>Health Tracker</strong> ("Application"). By installing, accessing, or using this application, you agree to comply with and be bound by the following terms and conditions of use. If you do not agree to these terms, please do not use the Application.</p>
+            <p>For details on how we collect, handle, and protect your personal data, please review our <a href="/privacy">Privacy Policy</a>.</p>
 
-        <div class="important-alert">
-            <h3>3. Disclaimer - Not Medical Advice</h3>
-            <p><strong>IMPORTANT:</strong> The Application is NOT a medical device, does not provide medical diagnoses, treatment plans, or professional medical advice.</p>
-            <ul>
-                <li>All tools and parameters (including the BMI calculator, daily tips, and hydration progress) are calculated using standard formulas for general nutritional logging.</li>
-                <li>Do not ignore or delay seeking professional medical advice because of information you have read in the Application.</li>
-                <li>Consult a licensed physician or Health Tracker provider before starting any severe diet, weight loss program, or extreme changes to your daily hydration goals.</li>
-            </ul>
-        </div>
+            <!-- Table of Contents Navigator -->
+            <nav class="toc-container" aria-label="Table of Contents">
+                <div class="toc-title">Quick Navigation</div>
+                <ul class="toc-list">
+                    <li class="toc-item"><a href="#acceptance">1. Acceptance</a></li>
+                    <li class="toc-item"><a href="#description">2. Service Description</a></li>
+                    <li class="toc-item"><a href="#disclaimer">3. Medical Disclaimer</a></li>
+                    <li class="toc-item"><a href="#accounts">4. User Accounts</a></li>
+                    <li class="toc-item"><a href="#deletion">5. Data & Account Deletion</a></li>
+                    <li class="toc-item"><a href="#acceptable-use">6. Acceptable Use</a></li>
+                    <li class="toc-item"><a href="#liability">7. Liability Limits</a></li>
+                    <li class="toc-item"><a href="#contact">8. Contact Us</a></li>
+                </ul>
+            </nav>
 
-        <h2>4. User Accounts</h2>
-        <p>To use certain features of the Application, you may be required to register for an account. You agree to provide accurate and complete registration profile information and to keep your credentials secure.</p>
+            <section id="acceptance">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing, downloading, or using the Health Tracker mobile application, you accept and agree to be legally bound by these Terms of Use and our <a href="/privacy">Privacy Policy</a>. These terms apply to all visitors, users, and others who access or use the service.</p>
+            </section>
 
-        <h2>5. Account Deletion and Data Retention</h2>
-        <p>You have the right to terminate your account and delete your data at any time. You can trigger complete account deletion inside the <strong>Profile Screen</strong> of the Application.</p>
+            <section id="description">
+                <h2>2. Description of Service</h2>
+                <p>Health Tracker is a personal wellness utility designed to assist users in monitoring lifestyle habits. Features provided by the Application include:</p>
+                <ul>
+                    <li>Hydration tracking and daily water intake goal setting.</li>
+                    <li>Body Mass Index (BMI) calculation based on standard anthropometric formulas.</li>
+                    <li>Weight tracking and progress logging.</li>
+                    <li>Informational healthy living tips and daily wellness habits.</li>
+                </ul>
+                <p>The Application is intended strictly for personal, non-commercial, informational, and habit-tracking purposes.</p>
+            </section>
 
-        <h2>6. Acceptable Use Policy</h2>
-        <p>You agree not to violate any applicable laws, reverse-engineer the Application code, or perform unauthorized attacks on Firebase services.</p>
+            <section id="disclaimer">
+                <div class="important-alert">
+                    <h3>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        3. Disclaimer - Not Medical Advice
+                    </h3>
+                    <p><strong>IMPORTANT:</strong> The Health Tracker Application is NOT a medical device, diagnostic tool, or replacement for professional healthcare services.</p>
+                    <ul>
+                        <li>All tools, calculations (including BMI calculations), recommendations, and hydration guidelines are generated using standard nutritional formulas for general logging purposes only.</li>
+                        <li>Do not ignore, disregard, or delay seeking professional medical advice or treatment because of content or information viewed within the Application.</li>
+                        <li>Always consult a licensed physician, doctor, or qualified healthcare provider before starting any severe diet, weight reduction program, or drastic modification to your daily fluid intake.</li>
+                    </ul>
+                </div>
+            </section>
 
-        <h2>7. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by law, in no event shall the Application developers be liable for any damages arising out of your use of or inability to use the Application.</p>
+            <section id="accounts">
+                <h2>4. User Accounts</h2>
+                <p>To access cloud features (such as profile synchronization and assessment responses), you may register for an account. You agree to provide accurate, current, and complete registration profile information and to maintain the security of your login credentials.</p>
+            </section>
 
-        <h2>8. Contact Us</h2>
-        <p>If you have any questions or queries regarding these Terms of Use, please contact us at <strong>healthtracker.support@gmail.com</strong>.</p>
-        
-        <div class="footer">
-            <p>&copy; 2026 Health Tracker App. All rights reserved.</p>
-        </div>
-    </div>
+            <section id="deletion">
+                <h2>5. Account Deletion and Data Retention</h2>
+                <p>You reserve the right to delete your account and remove your personal data at any time:</p>
+                <ul>
+                    <li><strong>In-App Deletion</strong>: You can trigger immediate account and database deletion inside the <strong>Profile Screen</strong> of the Application.</li>
+                    <li><strong>Web Deletion Portal</strong>: If you have uninstalled the app, you can submit a deletion request via our <a href="/delete-account">Account Deletion Page</a> or <a href="/request">Request Form</a>.</li>
+                </ul>
+            </section>
+
+            <section id="acceptable-use">
+                <h2>6. Acceptable Use Policy</h2>
+                <p>You agree not to modify, reverse-engineer, decompile, or attempt to extract source code from the Application. You must not misuse our services, launch unauthorized automated queries, or interfere with cloud infrastructure (Google Firebase).</p>
+            </section>
+
+            <section id="liability">
+                <h2>7. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by applicable law, in no event shall the Application developers, affiliates, or licensors be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your access to or use of (or inability to access or use) the Application.</p>
+            </section>
+
+            <section id="contact">
+                <h2>8. Contact Us</h2>
+                <p>If you have any questions, concerns, or inquiries regarding these Terms of Use, please reach out to our support team at:</p>
+                <div class="section-card">
+                    <p style="margin: 0;"><strong>Support Email:</strong> <a href="mailto:healthtracker.support@gmail.com">healthtracker.support@gmail.com</a></p>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>&copy; 2026 Health Tracker App. All rights reserved. | <a href="/privacy">Privacy Policy</a> | <a href="/delete-account">Delete Account</a></p>
+            </footer>
+
+        </article>
+    </main>
+
+    <!-- Theme Handling Script (URL Parameter, Local Storage, System Preference) -->
+    <script>
+        (function() {
+            function determineTheme() {
+                // 1. Check URL query parameters (?theme=dark or ?theme=light)
+                const urlParams = new URLSearchParams(window.location.search);
+                const urlTheme = urlParams.get('theme');
+                if (urlTheme === 'dark' || urlTheme === 'light') {
+                    return urlTheme;
+                }
+
+                // 2. Check localStorage
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark' || savedTheme === 'light') {
+                    return savedTheme;
+                }
+
+                // 3. Fallback to OS system preference
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const theme = determineTheme();
+            document.documentElement.setAttribute('data-theme', theme);
+
+            // Listen for system theme changes if no explicit theme override is present
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+                const urlParams = new URLSearchParams(window.location.search);
+                if (!urlParams.has('theme') && !localStorage.getItem('theme')) {
+                    document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
