@@ -3,33 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Health Tracker App</title>
+    <title>Privacy Policy - WalkWise: Smart Step Tracking App</title>
     
     <!-- Primary Meta Tags -->
-    <meta name="title" content="Privacy Policy - Health Tracker App">
+    <meta name="title" content="Privacy Policy - WalkWise: Smart Step Tracking App">
     <meta name="theme-color" content="#16a34a">
-    <meta name="apple-mobile-web-app-title" content="Health Tracker">
-    <meta name="application-name" content="Health Tracker">
+    <meta name="apple-mobile-web-app-title" content="WalkWise: Smart Step Tracking">
+    <meta name="application-name" content="WalkWise: Smart Step Tracking">
 
     <!-- Open Graph / Facebook / Instagram / WhatsApp / Telegram / iMessage / LinkedIn / Discord -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://healthtrackapp.com/privacy/">
-    <meta property="og:site_name" content="Health Tracker">
-    <meta property="og:title" content="Privacy Policy - Health Tracker App">
+    <meta property="og:site_name" content="WalkWise: Smart Step Tracking">
+    <meta property="og:title" content="Privacy Policy - WalkWise: Smart Step Tracking App">
     <meta property="og:image" content="https://healthtrackapp.com/images/play_store_512.png">
     <meta property="og:image:secure_url" content="https://healthtrackapp.com/images/play_store_512.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="512">
     <meta property="og:image:height" content="512">
-    <meta property="og:image:alt" content="Health Tracker Logo">
+    <meta property="og:image:alt" content="WalkWise: Smart Step Tracking Logo">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter / X Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://healthtrackapp.com/privacy/">
-    <meta name="twitter:title" content="Privacy Policy - Health Tracker App">
+    <meta name="twitter:title" content="Privacy Policy - WalkWise: Smart Step Tracking App">
     <meta name="twitter:image" content="https://healthtrackapp.com/images/play_store_512.png">
-    <meta name="twitter:image:alt" content="Health Tracker Logo">
+    <meta name="twitter:image:alt" content="WalkWise: Smart Step Tracking Logo">
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" href="/images/app_icon.png">
@@ -288,10 +288,10 @@
             <div class="doc-header">
                 <div class="brand-header-block">
                     <div class="brand-logo-wrapper">
-                        <img src="/images/app_icon.png" alt="Health Tracker Logo" class="brand-logo" onerror="this.onerror=null; this.src='../images/app_icon.png';">
+                        <img src="/images/app_icon.png" alt="WalkWise: Smart Step Tracking Logo" class="brand-logo" onerror="this.onerror=null; this.src='../images/app_icon.png';">
                     </div>
                     <div class="brand-title-group">
-                        <span class="brand-app-name">Health Tracker</span>
+                        <span class="brand-app-name">WalkWise: Smart Step Tracking</span>
                         <h1>Privacy Policy</h1>
                     </div>
                 </div>
@@ -301,11 +301,44 @@
                 </div>
             </div>
 
-            <p>This privacy policy governs your use of the software application <strong>Health Tracker</strong> ("Application") for mobile devices. The Application is a health and lifestyle utility designed to help users track water consumption, calculate Body Mass Index (BMI), log weight progress, and view daily health tips.</p>
+            <p>This privacy policy governs your use of the software application <strong>WalkWise: Smart Step Tracking</strong> ("Application") for mobile devices. The Application is a health and lifestyle utility designed to help users track water consumption, calculate Body Mass Index (BMI), log weight progress, and view daily health tips.</p>
             <p>For terms relating to usage constraints and medical disclaimers, please read our <a href="/terms">Terms of Use</a>.</p>
 
             <h2>1. Information Collection and Use</h2>
             <p>We are committed to protecting your privacy. The Application collects user data to provide and improve its services. This data is split between local storage on your device and secure cloud storage:</p>
+
+<h3>Step‑Tracker Data</h3>
+<p>When you enable the <strong>Step Tracker</strong> in the app, we collect the following information:</p>
+<ul>
+    <li><strong>Step count</strong> (number of steps taken per day)</li>
+    <li><strong>Activity timestamps</strong> (date and time of each recorded step)</li>
+    <li><strong>Device sensor data</strong> (accelerometer, optional GPS if you grant location permission)</li>
+</ul>
+
+<p><strong>Why we collect it</strong></p>
+<ul>
+    <li>To display your daily/weekly step totals within the app.</li>
+    <li>To generate aggregated usage statistics that help us improve the product.</li>
+    <li>(Optional) To sync with third‑party health services you connect.</li>
+</ul>
+
+<p><strong>Your rights</strong></p>
+<ul>
+    <li>You can enable/disable the tracker at any time in <em>Settings → Health → Step Tracker</em>.</li>
+    <li>You may delete all recorded step data via <em>Settings → Health → Clear Step History</em>.</li>
+</ul>
+
+<p><strong>Retention</strong></p>
+<ul>
+    <li>Raw step records are kept for <strong>30 days</strong>. Aggregated summaries are retained for up to <strong>2 years</strong>.</li>
+    <li>Deleting your account removes all step data permanently.</li>
+</ul>
+
+<p><strong>Data sharing</strong></p>
+<ul>
+    <li>Step data is <strong>not</strong> shared with advertisers.</li>
+    <li>Aggregated, anonymised statistics are sent to our analytics provider (e.g., Google Analytics) for product improvement.</li>
+</ul>
             
             <div class="section-card">
                 <h3>A. Cloud Storage (Firebase Firestore)</h3>
@@ -320,10 +353,11 @@
             <div class="section-card">
                 <h3>B. Local Storage (SharedPreferences)</h3>
                 <p>All fitness logging data, specifically:</p>
-                <ul>
-                    <li>Daily water intake logging progress.</li>
-                    <li>Weight logs and progress updates.</li>
-                </ul>
+<ul>
+    <li>Daily water intake logging progress.</li>
+    <li>Weight logs and progress updates.</li>
+    <li>Step‑Tracker data: automatic step count logging, daily activity summaries, optional progress sharing.</li>
+</ul>
                 <p>are saved locally on your device for fast access and to minimize internet consumption. This local data is not shared with third parties.</p>
             </div>
 
@@ -392,7 +426,7 @@
             <p>If you have any questions or suggestions about our Privacy Policy, Data Retention practices, or data deletion procedures, do not hesitate to contact us at <strong>healthtracker.support@gmail.com</strong>.</p>
             
             <footer class="footer">
-                <p>&copy; 2026 Health Tracker App. All rights reserved. | <a href="/terms">Terms of Use</a> | <a href="/delete-account">Delete Account</a></p>
+                <p>&copy; 2026 WalkWise: Smart Step Tracking App. All rights reserved. | <a href="/terms">Terms of Use</a> | <a href="/delete-account">Delete Account</a></p>
             </footer>
 
         </article>
